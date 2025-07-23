@@ -4,6 +4,8 @@ import os
 
 load_dotenv()
 
-client = MongoClient(os.getenv("MONGODB_URI"))
-db = client["product_catalog"]
-collection = db["products"]
+MONGO_URI = os.getenv("MONGO_URI")
+
+client = MongoClient(MONGO_URI)
+db = client["mydatabase"]
+collection = db["users"]

@@ -1,9 +1,9 @@
-from pydantic import BaseModel
-from typing import Optional
+from pydantic import BaseModel, EmailStr
+from typing import List
 
-class Product(BaseModel):
+class User(BaseModel):
     name: str
-    category: str
-    status: str
-    availability: str
-    price: float
+    email: EmailStr
+    age: int
+    country: str
+    interests: List[str]

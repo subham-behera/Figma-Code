@@ -1,0 +1,51 @@
+[
+    {
+      "label": "Full Name",
+      "type": "text",
+      "placeholder": "Enter your full name",
+      "name": "fullName",
+      "required": true
+    },
+    {
+      "label": "Email",
+      "type": "email",
+      "placeholder": "Enter your email",
+      "name": "email",
+      "required": true
+    },
+    {
+      "label": "Password",
+      "type": "password",
+      "placeholder": "Enter your password",
+      "name": "password",
+      "required": true
+    },
+    {
+      "label": "Gender",
+      "type": "radio",
+      "name": "gender",
+      "required": true,
+      "options": [
+        { "label": "Male", "value": "male" },
+        { "label": "Female", "value": "female" },
+        { "label": "Other", "value": "other" }
+      ]
+    },
+    {
+      "label": "Country",
+      "type": "select",
+      "name": "country",
+      "required": false,
+      "options": [
+        { "label": "India", "value": "in" },
+        { "label": "USA", "value": "us" },
+        { "label": "UK", "value": "uk" }
+      ]
+    },
+    {
+      "label": "Terms & Conditions",
+      "type": "checkbox",
+      "name": "terms",
+      "required": true
+    }
+  ]

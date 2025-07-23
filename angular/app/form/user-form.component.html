@@ -1,0 +1,107 @@
+<!-- user-form.component.html -->
+<div class="form-container">
+    <h2>User Registration Form</h2>
+    
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="user-form">
+      
+      <!-- Dynamic Form Fields -->
+      <div *ngFor="let field of formFields" class="form-group">
+        
+        <!-- Text, Email, Password Fields -->
+        <div *ngIf="field.type === 'text' || field.type === 'email' || field.type === 'password'">
+          <label [for]="field.name">
+            {{ field.label }}
+            <span *ngIf="field.required" class="required">*</span>
+          </label>
+          <input 
+            [type]="field.type"
+            [id]="field.name"
+            [formControlName]="field.name"
+            [placeholder]="field.placeholder || ''"
+            class="form-control"
+            [class.error]="isFieldInvalid(field.name)">
+          
+          <div class="error-message" *ngIf="isFieldInvalid(field.name)">
+            <span *ngIf="hasError(field.name, 'required')">{{ field.label }} is required</span>
+            <span *ngIf="hasError(field.name, 'email')">Please enter a valid email</span>
+            <span *ngIf="hasError(field.name, 'minlength')">{{ field.label }} must be at least 6 characters</span>
+          </div>
+        </div>
+  
+        <!-- Radio Button Fields -->
+        <div *ngIf="field.type === 'radio'">
+          <label class="form-label">
+            {{ field.label }}
+            <span *ngIf="field.required" class="required">*</span>
+          </label>
+          <div class="radio-group">
+            <div *ngFor="let option of field.options" class="radio-item">
+              <input 
+                type="radio" 
+                [id]="field.name + '_' + option.value"
+                [formControlName]="field.name"
+                [value]="option.value">
+              <label [for]="field.name + '_' + option.value">{{ option.label }}</label>
+            </div>
+          </div>
+          
+          <div class="error-message" *ngIf="isFieldInvalid(field.name)">
+            <span *ngIf="hasError(field.name, 'required')">Please select {{ field.label.toLowerCase() }}</span>
+          </div>
+        </div>
+  
+        <!-- Select/Dropdown Fields -->
+        <div *ngIf="field.type === 'select'">
+          <label [for]="field.name">
+            {{ field.label }}
+            <span *ngIf="field.required" class="required">*</span>
+          </label>
+          <select 
+            [id]="field.name"
+            [formControlName]="field.name"
+            class="form-control"
+            [class.error]="isFieldInvalid(field.name)">
+            <option value="">Select {{ field.label.toLowerCase() }}</option>
+            <option *ngFor="let option of field.options" [value]="option.value">
+              {{ option.label }}
+            </option>
+          </select>
+          
+          <div class="error-message" *ngIf="isFieldInvalid(field.name)">
+            <span *ngIf="hasError(field.name, 'required')">Please select {{ field.label.toLowerCase() }}</span>
+          </div>
+        </div>
+  
+        <!-- Checkbox Fields -->
+        <div *ngIf="field.type === 'checkbox'">
+          <div class="checkbox-group">
+            <input 
+              type="checkbox" 
+              [id]="field.name"
+              [formControlName]="field.name"
+              [class.error]="isFieldInvalid(field.name)">
+            <label [for]="field.name">
+              {{ field.label }}
+              <span *ngIf="field.required" class="required">*</span>
+            </label>
+          </div>
+          
+          <div class="error-message" *ngIf="isFieldInvalid(field.name)">
+            <span *ngIf="hasError(field.name, 'required')">You must agree to {{ field.label.toLowerCase() }}</span>
+          </div>
+        </div>
+  
+      </div>
+  
+      <!-- Submit Button -->
+      <div class="form-group">
+        <button 
+          type="submit" 
+          class="submit-btn"
+          [disabled]="userForm.invalid">
+          Register
+        </button>
+      </div>
+  
+    </form>
+</div>

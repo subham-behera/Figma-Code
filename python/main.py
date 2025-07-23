@@ -1,23 +1,30 @@
 from fastapi import FastAPI, HTTPException
-from models import Product
+from models import User
 from database import collection
 from bson import ObjectId
+from fastapi.encoders import jsonable_encoder
 
 app = FastAPI()
 
-@app.get("/products")
-def get_products():
-    products = list(collection.find({}, {"_id": 0}))
-    return products
+@app.post("/users")
+def create_user(user: User):
+    user_dict = jsonable_encoder(user)
+    result = collection.insert_one(user_dict)
+    return {"id": str(result.inserted_id)}
 
-@app.post("/products")
-def add_product(product: Product):
-    collection.insert_one(product.dict())
-    return {"message": "Product added"}
+@app.get("/users")
+def get_users():
+    users = list(collection.find())
+    for user in users:
+        user["id"] = str(user["_id"])
+        del user["_id"]
+    return users
 
-@app.delete("/products/{name}")
-def delete_product(name: str):
-    result = collection.delete_one({"name": name})
-    if result.deleted_count == 0:
-        raise HTTPException(status_code=404, detail="Product not found")
-    return {"message": "Product deleted"}
+@app.get("/users/{user_id}")
+def get_user(user_id: str):
+    user = collection.find_one({"_id": ObjectId(user_id)})
+    if not user:
+        raise HTTPException(status_code=404, detail="User not found")
+    user["id"] = str(user["_id"])
+    del user["_id"]
+    return user
