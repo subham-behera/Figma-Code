@@ -1,0 +1,232 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+    <title>Stitch Design</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden" style='font-family: Inter, "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f1f2f4] px-10 py-3">
+          <div class="flex items-center gap-4 text-[#121416]">
+            <div class="size-4">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+            <h2 class="text-[#121416] text-lg font-bold leading-tight tracking-[-0.015em]">Catalog Manager</h2>
+          </div>
+          <div class="flex flex-1 justify-end gap-8">
+            <div class="flex items-center gap-9">
+              <a class="text-[#121416] text-sm font-medium leading-normal" href="#">Products</a>
+              <a class="text-[#121416] text-sm font-medium leading-normal" href="#">Categories</a>
+              <a class="text-[#121416] text-sm font-medium leading-normal" href="#">Attributes</a>
+              <a class="text-[#121416] text-sm font-medium leading-normal" href="#">Activity</a>
+            </div>
+            <button
+              class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 bg-[#f1f2f4] text-[#121416] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5"
+            >
+              <div class="text-[#121416]" data-icon="Bell" data-size="20px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                  <path
+                    d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"
+                  ></path>
+                </svg>
+              </div>
+            </button>
+            <div
+              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBH23noL-peQ7FFbWppS_yw3yvTOGEVqluM09lc8JHPWVRvYoHX4FCrU5PMD9oo17-R6cGx0tLy1YnSW8NcN_r_KfgEkAfxk_b1NFkiQMcc0q3ktOtfFhdk9p59f3gyVKgQg2XvOAv7JKbiPsPOJmCUHeIspF4nJOEtMM-QtUGASv-V1eAU3CQgMRDxymLAAIyuYYkjf_wSMBCcE2Fc0WUc1zdo3l3HMncwYNSF7z-8YeYxF3zq6IHAUn_2KKGh29AUD1pi41g4dtE");'
+            ></div>
+          </div>
+        </header>
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="flex flex-wrap justify-between gap-3 p-4">
+              <div class="flex min-w-72 flex-col gap-3">
+                <p class="text-[#121416] tracking-light text-[32px] font-bold leading-tight">Activity Log</p>
+                <p class="text-[#6a7581] text-sm font-normal leading-normal">Track all changes made to the product catalog</p>
+              </div>
+            </div>
+            <div class="px-4 py-3 @container">
+              <div class="flex overflow-hidden rounded-xl border border-[#dde0e3] bg-white">
+                <table class="flex-1">
+                  <thead>
+                    <tr class="bg-white">
+                      <th class="table-75ce61d3-b61e-4a56-a1f7-2e75ae6b0761-column-120 px-4 py-3 text-left text-[#121416] w-[400px] text-sm font-medium leading-normal">User</th>
+                      <th class="table-75ce61d3-b61e-4a56-a1f7-2e75ae6b0761-column-240 px-4 py-3 text-left text-[#121416] w-[400px] text-sm font-medium leading-normal">Action</th>
+                      <th class="table-75ce61d3-b61e-4a56-a1f7-2e75ae6b0761-column-360 px-4 py-3 text-left text-[#121416] w-[400px] text-sm font-medium leading-normal">
+                        Timestamp
+                      </th>
+                      <th class="table-75ce61d3-b61e-4a56-a1f7-2e75ae6b0761-column-480 px-4 py-3 text-left text-[#121416] w-[400px] text-sm font-medium leading-normal">Details</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="border-t border-t-[#dde0e3]">
+                      <td class="table-75ce61d3-b61e-4a56-a1f7-2e75ae6b0761-column-120 h-[72px] px-4 py-2 w-[400px] text-[#121416] text-sm font-normal leading-normal">
+                        Sophia Clark
+                      </td>
+                      <td class="table-75ce61d3-b61e-4a56-a1f7-2e75ae6b0761-column-240 h-[72px] px-4 py-2 w-[400px] text-[#6a7581] text-sm font-normal leading-normal">
+                        Product Added
+                      </td>
+                      <td class="table-75ce61d3-b61e-4a56-a1f7-2e75ae6b0761-column-360 h-[72px] px-4 py-2 w-[400px] text-[#6a7581] text-sm font-normal leading-normal">
+                        2024-01-15 10:30 AM
+                      </td>
+                      <td class="table-75ce61d3-b61e-4a56-a1f7-2e75ae6b0761-column-480 h-[72px] px-4 py-2 w-[400px] text-[#6a7581] text-sm font-normal leading-normal">
+                        Added 'Eco-Friendly Water Bottle' to the catalog
+                      </td>
+                    </tr>
+                    <tr class="border-t border-t-[#dde0e3]">
+                      <td class="table-75ce61d3-b61e-4a56-a1f7-2e75ae6b0761-column-120 h-[72px] px-4 py-2 w-[400px] text-[#121416] text-sm font-normal leading-normal">
+                        Ethan Miller
+                      </td>
+                      <td class="table-75ce61d3-b61e-4a56-a1f7-2e75ae6b0761-column-240 h-[72px] px-4 py-2 w-[400px] text-[#6a7581] text-sm font-normal leading-normal">
+                        Product Edited
+                      </td>
+                      <td class="table-75ce61d3-b61e-4a56-a1f7-2e75ae6b0761-column-360 h-[72px] px-4 py-2 w-[400px] text-[#6a7581] text-sm font-normal leading-normal">
+                        2024-01-15 11:45 AM
+                      </td>
+                      <td class="table-75ce61d3-b61e-4a56-a1f7-2e75ae6b0761-column-480 h-[72px] px-4 py-2 w-[400px] text-[#6a7581] text-sm font-normal leading-normal">
+                        Updated price of 'Organic Cotton T-Shirt'
+                      </td>
+                    </tr>
+                    <tr class="border-t border-t-[#dde0e3]">
+                      <td class="table-75ce61d3-b61e-4a56-a1f7-2e75ae6b0761-column-120 h-[72px] px-4 py-2 w-[400px] text-[#121416] text-sm font-normal leading-normal">
+                        Olivia Davis
+                      </td>
+                      <td class="table-75ce61d3-b61e-4a56-a1f7-2e75ae6b0761-column-240 h-[72px] px-4 py-2 w-[400px] text-[#6a7581] text-sm font-normal leading-normal">
+                        Product Deleted
+                      </td>
+                      <td class="table-75ce61d3-b61e-4a56-a1f7-2e75ae6b0761-column-360 h-[72px] px-4 py-2 w-[400px] text-[#6a7581] text-sm font-normal leading-normal">
+                        2024-01-15 01:20 PM
+                      </td>
+                      <td class="table-75ce61d3-b61e-4a56-a1f7-2e75ae6b0761-column-480 h-[72px] px-4 py-2 w-[400px] text-[#6a7581] text-sm font-normal leading-normal">
+                        Removed 'Discontinued Model X Phone' from the catalog
+                      </td>
+                    </tr>
+                    <tr class="border-t border-t-[#dde0e3]">
+                      <td class="table-75ce61d3-b61e-4a56-a1f7-2e75ae6b0761-column-120 h-[72px] px-4 py-2 w-[400px] text-[#121416] text-sm font-normal leading-normal">
+                        Liam Wilson
+                      </td>
+                      <td class="table-75ce61d3-b61e-4a56-a1f7-2e75ae6b0761-column-240 h-[72px] px-4 py-2 w-[400px] text-[#6a7581] text-sm font-normal leading-normal">
+                        User Login
+                      </td>
+                      <td class="table-75ce61d3-b61e-4a56-a1f7-2e75ae6b0761-column-360 h-[72px] px-4 py-2 w-[400px] text-[#6a7581] text-sm font-normal leading-normal">
+                        2024-01-15 02:55 PM
+                      </td>
+                      <td class="table-75ce61d3-b61e-4a56-a1f7-2e75ae6b0761-column-480 h-[72px] px-4 py-2 w-[400px] text-[#6a7581] text-sm font-normal leading-normal">
+                        User Liam Wilson logged in
+                      </td>
+                    </tr>
+                    <tr class="border-t border-t-[#dde0e3]">
+                      <td class="table-75ce61d3-b61e-4a56-a1f7-2e75ae6b0761-column-120 h-[72px] px-4 py-2 w-[400px] text-[#121416] text-sm font-normal leading-normal">
+                        Sophia Clark
+                      </td>
+                      <td class="table-75ce61d3-b61e-4a56-a1f7-2e75ae6b0761-column-240 h-[72px] px-4 py-2 w-[400px] text-[#6a7581] text-sm font-normal leading-normal">
+                        Product Added
+                      </td>
+                      <td class="table-75ce61d3-b61e-4a56-a1f7-2e75ae6b0761-column-360 h-[72px] px-4 py-2 w-[400px] text-[#6a7581] text-sm font-normal leading-normal">
+                        2024-01-16 09:15 AM
+                      </td>
+                      <td class="table-75ce61d3-b61e-4a56-a1f7-2e75ae6b0761-column-480 h-[72px] px-4 py-2 w-[400px] text-[#6a7581] text-sm font-normal leading-normal">
+                        Added 'Reusable Shopping Bag' to the catalog
+                      </td>
+                    </tr>
+                    <tr class="border-t border-t-[#dde0e3]">
+                      <td class="table-75ce61d3-b61e-4a56-a1f7-2e75ae6b0761-column-120 h-[72px] px-4 py-2 w-[400px] text-[#121416] text-sm font-normal leading-normal">
+                        Ethan Miller
+                      </td>
+                      <td class="table-75ce61d3-b61e-4a56-a1f7-2e75ae6b0761-column-240 h-[72px] px-4 py-2 w-[400px] text-[#6a7581] text-sm font-normal leading-normal">
+                        Product Edited
+                      </td>
+                      <td class="table-75ce61d3-b61e-4a56-a1f7-2e75ae6b0761-column-360 h-[72px] px-4 py-2 w-[400px] text-[#6a7581] text-sm font-normal leading-normal">
+                        2024-01-16 10:30 AM
+                      </td>
+                      <td class="table-75ce61d3-b61e-4a56-a1f7-2e75ae6b0761-column-480 h-[72px] px-4 py-2 w-[400px] text-[#6a7581] text-sm font-normal leading-normal">
+                        Updated description of 'Sustainable Bamboo Toothbrush'
+                      </td>
+                    </tr>
+                    <tr class="border-t border-t-[#dde0e3]">
+                      <td class="table-75ce61d3-b61e-4a56-a1f7-2e75ae6b0761-column-120 h-[72px] px-4 py-2 w-[400px] text-[#121416] text-sm font-normal leading-normal">
+                        Olivia Davis
+                      </td>
+                      <td class="table-75ce61d3-b61e-4a56-a1f7-2e75ae6b0761-column-240 h-[72px] px-4 py-2 w-[400px] text-[#6a7581] text-sm font-normal leading-normal">
+                        Product Deleted
+                      </td>
+                      <td class="table-75ce61d3-b61e-4a56-a1f7-2e75ae6b0761-column-360 h-[72px] px-4 py-2 w-[400px] text-[#6a7581] text-sm font-normal leading-normal">
+                        2024-01-16 12:05 PM
+                      </td>
+                      <td class="table-75ce61d3-b61e-4a56-a1f7-2e75ae6b0761-column-480 h-[72px] px-4 py-2 w-[400px] text-[#6a7581] text-sm font-normal leading-normal">
+                        Removed 'Outdated Gadget Y' from the catalog
+                      </td>
+                    </tr>
+                    <tr class="border-t border-t-[#dde0e3]">
+                      <td class="table-75ce61d3-b61e-4a56-a1f7-2e75ae6b0761-column-120 h-[72px] px-4 py-2 w-[400px] text-[#121416] text-sm font-normal leading-normal">
+                        Liam Wilson
+                      </td>
+                      <td class="table-75ce61d3-b61e-4a56-a1f7-2e75ae6b0761-column-240 h-[72px] px-4 py-2 w-[400px] text-[#6a7581] text-sm font-normal leading-normal">
+                        User Login
+                      </td>
+                      <td class="table-75ce61d3-b61e-4a56-a1f7-2e75ae6b0761-column-360 h-[72px] px-4 py-2 w-[400px] text-[#6a7581] text-sm font-normal leading-normal">
+                        2024-01-16 01:40 PM
+                      </td>
+                      <td class="table-75ce61d3-b61e-4a56-a1f7-2e75ae6b0761-column-480 h-[72px] px-4 py-2 w-[400px] text-[#6a7581] text-sm font-normal leading-normal">
+                        User Liam Wilson logged in
+                      </td>
+                    </tr>
+                    <tr class="border-t border-t-[#dde0e3]">
+                      <td class="table-75ce61d3-b61e-4a56-a1f7-2e75ae6b0761-column-120 h-[72px] px-4 py-2 w-[400px] text-[#121416] text-sm font-normal leading-normal">
+                        Sophia Clark
+                      </td>
+                      <td class="table-75ce61d3-b61e-4a56-a1f7-2e75ae6b0761-column-240 h-[72px] px-4 py-2 w-[400px] text-[#6a7581] text-sm font-normal leading-normal">
+                        Product Added
+                      </td>
+                      <td class="table-75ce61d3-b61e-4a56-a1f7-2e75ae6b0761-column-360 h-[72px] px-4 py-2 w-[400px] text-[#6a7581] text-sm font-normal leading-normal">
+                        2024-01-17 08:50 AM
+                      </td>
+                      <td class="table-75ce61d3-b61e-4a56-a1f7-2e75ae6b0761-column-480 h-[72px] px-4 py-2 w-[400px] text-[#6a7581] text-sm font-normal leading-normal">
+                        Added 'Solar-Powered Charger' to the catalog
+                      </td>
+                    </tr>
+                    <tr class="border-t border-t-[#dde0e3]">
+                      <td class="table-75ce61d3-b61e-4a56-a1f7-2e75ae6b0761-column-120 h-[72px] px-4 py-2 w-[400px] text-[#121416] text-sm font-normal leading-normal">
+                        Ethan Miller
+                      </td>
+                      <td class="table-75ce61d3-b61e-4a56-a1f7-2e75ae6b0761-column-240 h-[72px] px-4 py-2 w-[400px] text-[#6a7581] text-sm font-normal leading-normal">
+                        Product Edited
+                      </td>
+                      <td class="table-75ce61d3-b61e-4a56-a1f7-2e75ae6b0761-column-360 h-[72px] px-4 py-2 w-[400px] text-[#6a7581] text-sm font-normal leading-normal">
+                        2024-01-17 10:05 AM
+                      </td>
+                      <td class="table-75ce61d3-b61e-4a56-a1f7-2e75ae6b0761-column-480 h-[72px] px-4 py-2 w-[400px] text-[#6a7581] text-sm font-normal leading-normal">
+                        Updated stock quantity of 'Recycled Paper Notebook'
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <style>
+                          @container(max-width:120px){.table-75ce61d3-b61e-4a56-a1f7-2e75ae6b0761-column-120{display: none;}}
+                @container(max-width:240px){.table-75ce61d3-b61e-4a56-a1f7-2e75ae6b0761-column-240{display: none;}}
+                @container(max-width:360px){.table-75ce61d3-b61e-4a56-a1f7-2e75ae6b0761-column-360{display: none;}}
+                @container(max-width:480px){.table-75ce61d3-b61e-4a56-a1f7-2e75ae6b0761-column-480{display: none;}}
+              </style>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
