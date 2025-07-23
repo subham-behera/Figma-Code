@@ -1,0 +1,30 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div *ngFor="let field of formConfig" [ngSwitch]="field.type" [style.width]="field.width || '100%'">
+      
+      <!-- Input Field -->
+      <div *ngSwitchCase="'input'">
+        <label>{{ field.label }}</label>
+        <input
+          [attr.type]="field.inputType"
+          [formControlName]="field.key"
+          [placeholder]="field.placeholder"
+          class="form-control"
+        />
+      </div>
+  
+      <!-- Dropdown Field -->
+      <div *ngSwitchCase="'dropdown'">
+        <label>{{ field.label }}</label>
+        <select [formControlName]="field.key" class="form-control">
+          <option *ngFor="let option of field.options" [value]="option">{{ option }}</option>
+        </select>
+      </div>
+  
+      <!-- Button -->
+      <div *ngSwitchCase="'button'">
+        <button type="submit">{{ field.label }}</button>
+      </div>
+  
+    </div>
+  </form>
+  
